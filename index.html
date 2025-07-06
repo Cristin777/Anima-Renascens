@@ -49,17 +49,8 @@
       margin: 20px auto;
     }
 
-    .button, .paypal {
+    .paypal-button {
       margin-top: 30px;
-      padding: 12px 25px;
-      background-color: #ffd700;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
     }
 
     footer {
@@ -68,6 +59,9 @@
       color: #888;
     }
   </style>
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAAaVkUxaVBs6tRyAIsC5SzH1jhrwK-GialFVALkLGvy6BVhXUENAbFKPsHsU23Sj2bs_PxNIzZ5IzAYCw&components=hosted-buttons&disable-funding=venmo&currency=BRL">
+  </script>
 </head>
 <body>
   <div class="container">
@@ -82,10 +76,15 @@
       <li>Seu valor não depende do quanto se sacrifica pelos outros</li>
     </ul>
 
-    <p><a class="button" href="mailto:cristin.rocha7@gmail.com?subject=Contato com Anima Renascens">Quero iniciar minha reconexão</a></p>
+    <div id="paypal-container-ZJDTM3EWHDU7G" class="paypal-button"></div>
+    <script>
+      paypal.HostedButtons({ hostedButtonId: "ZJDTM3EWHDU7G" }).render("#paypal-container-ZJDTM3EWHDU7G")
+    </script>
 
-    <p><a class="paypal" href="https://www.paypal.com/ncp/payment/ZJDTM3EWHDU7G" target="_blank">Contribuição Avulsa R$30</a></p>
-    <p><a class="paypal" href="https://www.paypal.com/ncp/payment/KLWQCCT99CXBW" target="_blank">Plano Mensal R$127</a></p>
+    <div id="paypal-container-KLWQCCT99CXBW" class="paypal-button"></div>
+    <script>
+      paypal.HostedButtons({ hostedButtonId: "KLWQCCT99CXBW" }).render("#paypal-container-KLWQCCT99CXBW")
+    </script>
 
     <footer>Criado por Maria Cristina Rocha Garcia © 2025</footer>
   </div>
